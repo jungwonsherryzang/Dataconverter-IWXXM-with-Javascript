@@ -1,0 +1,25 @@
+{
+  "name": "grp_iwxxm",
+  "version": "1.0.0",
+  "description": "GRP capstone project-iwxxm converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc --allowSyntheticDefaultImports --isolatedModules --moduleResolution node --module esnext index.ts",
+    "start": "npm run compile && node index.js"
+  },
+  "author": "Sherry Jungwon Zang",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@types/xml": "^1.0.7",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.4",
+    "xml": "^1.0.1"
+  },
+  "dependencies": {
+    "source-map-loader": "^3.0.1",
+    "ts-loader": "^9.2.6",
+    "xml-js": "^1.6.11"
+  }
+}
