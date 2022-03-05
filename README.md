@@ -84,7 +84,7 @@ parser.addSchema('http://icao.int/iwxxm/3.0', xsd, function (err, importsAndIncl
 ```
 
 ### READ AND WRITE FILE
-```
+``` javascript
 //Using readFileSync to read file
 var xsd = fs.readFileSync('./tests/xsd/IWXXM/airmet.xsd', {encoding: 'utf-8'});
 var xml = fs.readFileSync('./tests/xml/IWXXM/airmet-A6-1a-TS.xml', {encoding: 'utf-8'});
