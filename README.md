@@ -65,20 +65,19 @@ var parser = new xml4js.Parser(options);
 var xsd = fs.readFileSync('./tests/xsd/IWXXM/airmet.xsd', {encoding: 'utf-8'});
 var xml = fs.readFileSync('./tests/xml/IWXXM/airmet-A6-1a-TS.xml', {encoding: 'utf-8'});
 
+var parseString = require('xml2js').parseString;
+
 parser.addSchema('http://icao.int/iwxxm/3.0', xsd, function (err, importsAndIncludes) { 
-    //importsAndIncludes contains schemas to be added as well to satisfy all imports and includes found in xsd file
-    //convert XML to JSON
-    xml2js.parseString(xml, { mergeAttrs: true }, (err, result) => {
-        if (err) {
-            throw err;
-    };
+    // importsAndIncludes contains schemas to be added as well to satisfy all imports and includes found in xsd file
+    
+    //convert xml to json
+    parseString(xml, function (err, result) {
+        //var json = JSON.stringify(result, null, 4);
+        console.log(util.inspect(result, false, null));
+        console.dir(result.Ffice2Message);
+        var json = JSON.stringify(result, null, 2);
 
-    //convert it to a JSON string
-    const json = JSON.stringify(result, null, 4);
-    console.log(util.inspect(result, false, null));
-
-    //save JSON in a file
-    fs.writeFileSync('./tests/output_iwxxm/airmet-A6-1a-TS.json', json);
+        fs.writeFileSync('./tests/output_iwxxm/airmet-A6-1a-TS.json', json);
     });
 });
 ```
