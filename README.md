@@ -94,56 +94,53 @@ fs.writeFileSync('./tests/output_iwxxm/airmet-A6-1a-TS.json', json);
 
 ### OUTCOME
 
+airmet-A6-1a-TS.json
+
 Packeage builds upon node-xml2js, detects and parses XML Schema that is used to transform Javascript Object into a consistent schema-driven structure.
 It maps attributes to $ field and values to _ field.
 from. https://github.com/peerlibrary/node-xml4js
 
-```
-'iwxxm:AIRMET': {
-    'xmlns:xlink': [ 'http://www.w3.org/1999/xlink' ],
-    'xmlns:gml': [ 'http://www.opengis.net/gml/3.2' ],
-    'xmlns:iwxxm': [ 'http://icao.int/iwxxm/3.0' ],
-    'xmlns:aixm': [ 'http://www.aixm.aero/schema/5.1.1' ],
-    'xmlns:xsi': [ 'http://www.w3.org/2001/XMLSchema-instance' ],
-    'xsi:schemaLocation': [
-      'http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd'
-    ],
-    'gml:id': [ 'uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5' ],
-    reportStatus: [ 'NORMAL' ],
-    permissibleUsage: [ 'OPERATIONAL' ],
-    'iwxxm:issueTime': [
+``` json
+"iwxxm:AIRMET": {
+    "$": {
+      "xmlns:xlink": "http://www.w3.org/1999/xlink",
+      "xmlns:gml": "http://www.opengis.net/gml/3.2",
+      "xmlns:iwxxm": "http://icao.int/iwxxm/3.0",
+      "xmlns:aixm": "http://www.aixm.aero/schema/5.1.1",
+      "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "xsi:schemaLocation": "http://icao.int/iwxxm/3.0 http://schemas.wmo.int/iwxxm/3.0/iwxxm.xsd",
+      "gml:id": "uuid.69a2497b-193c-47bf-a6bd-1cc71acbc8e5",
+      "reportStatus": "NORMAL",
+      "permissibleUsage": "OPERATIONAL"
+    },
+    "iwxxm:issueTime": [
       {
-        'gml:TimeInstant': [
+        "gml:TimeInstant": [
           {
-            'gml:id': [ 'uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd' ],
-            'gml:timePosition': [ '2014-05-15T15:20:00Z' ]
-          }
-        ]
-      }
-    ],
-    'iwxxm:issuingAirTrafficServicesUnit': [
-      {
-        'aixm:Unit': [
-          {
-            'gml:id': [ 'uuid.1b54b36f-bc16-4111-abb6-05ff6aad744b' ],
-            'aixm:timeSlice': [
-              {
-                'aixm:UnitTimeSlice': [
-                  {
-                    'gml:id': [ 'uuid.91cf4ebe-8687-432f-a1e1-aaf7ebc053b2' ],
-                    'gml:validTime': [ '' ],
-                    'aixm:interpretation': [ 'SNAPSHOT' ],
-                    'aixm:name': [ 'YUDD FIC' ],
-                    'aixm:type': [ 'FIC' ],
-                    'aixm:designator': [ 'YUDD' ]
-                  }
-                ]
-              }
+            "$": {
+              "gml:id": "uuid.6ffb87f7-6eef-4bae-b4f2-016e2951d7dd"
+            },
+            "gml:timePosition": [
+              "2014-05-15T15:20:00Z"
             ]
           }
         ]
       }
     ],
+    "iwxxm:issuingAirTrafficServicesUnit": [
+      {
+        "aixm:Unit": [
+          {
+            "$": {
+              "gml:id": "uuid.1b54b36f-bc16-4111-abb6-05ff6aad744b"
+            },
+            "aixm:timeSlice": [
+              {
+                "aixm:UnitTimeSlice": [
+                  {
+                    "$": {
+                      "gml:id": "uuid.91cf4ebe-8687-432f-a1e1-aaf7ebc053b2"
+                    },
 ```
 
 
