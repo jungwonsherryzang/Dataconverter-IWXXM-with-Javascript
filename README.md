@@ -74,7 +74,7 @@ parser.addSchema('http://icao.int/iwxxm/3.0', xsd, function (err, importsAndIncl
     parseString(xml, function (err, result) {
         //var json = JSON.stringify(result, null, 4);
         console.log(util.inspect(result, false, null));
-        console.dir(result.Ffice2Message);
+        console.dir(result);
         var json = JSON.stringify(result, null, 2);
 
         fs.writeFileSync('./tests/output_iwxxm/airmet-A6-1a-TS.json', json);
