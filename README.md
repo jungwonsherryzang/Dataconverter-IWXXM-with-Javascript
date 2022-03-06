@@ -93,6 +93,11 @@ fs.writeFileSync('./tests/output_iwxxm/airmet-A6-1a-TS.json', json);
 ```
 
 ### OUTCOME
+
+Packeage builds upon node-xml2js, detects and parses XML Schema that is used to transform Javascript Object into a consistent schema-driven structure.
+It maps attributes to $ field and values to _ field.
+from. https://github.com/peerlibrary/node-xml4js
+
 ```
 'iwxxm:AIRMET': {
     'xmlns:xlink': [ 'http://www.w3.org/1999/xlink' ],
