@@ -48,6 +48,11 @@ Use npm to install xml4js package:
 npm install xml4js
 ```
 
+Use npm to install xml2js package:
+```
+npm install xml2js
+```
+
 ### USAGE
 ``` javascript
 var fs = require('fs');
