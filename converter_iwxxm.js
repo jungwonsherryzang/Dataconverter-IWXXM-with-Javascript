@@ -21,6 +21,6 @@ parser.addSchema('http://icao.int/iwxxm/3.0', xsd, function (err, importsAndIncl
         console.dir(result);
         var json = JSON.stringify(result, null, 2);
 
-        fs.writeFileSync('./tests/output_iwxxm/1.json', json);
+        fs.writeFileSync('./tests/output_iwxxm/airmet-translation-failed.json', json);
     });
 });
