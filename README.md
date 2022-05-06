@@ -42,16 +42,6 @@ Technical Regulations may impose requirements that are not described in this sch
 </schema>
 ```
 
-## INSTALLATION
-Use npm to install xml4js package:
-```
-npm install xml4js
-```
-
-Use npm to install xml2js package:
-```
-npm install xml2js
-```
 
 ### USAGE
 ``` javascript
@@ -147,6 +137,29 @@ from. https://github.com/peerlibrary/node-xml4js
                       "gml:id": "uuid.91cf4ebe-8687-432f-a1e1-aaf7ebc053b2"
                     },
 ```
+
+
+# HOW TO BUILD MODULE
+## 1. INSTALLATION LIBRARIES
+Use npm to install xml4js package:
+```
+npm install xml4js
+```
+
+Use npm to install xml2js package:
+```
+npm install xml2js
+```
+
+## 2. CONVERTING XML FILES
+In converter_iwxxm.js file and converter_fixm.js file, put xsd file with file path and relating xml file with xsd.
+Next, put targetnamespace address in addschema function.
+And then, set the file path that you want to save the converted json file in writeFIleSynce function section.
+
+
+## 3. RUNNING CONVERTER_IWXXM.JS or CONVERTER_FIXM.JS FILE
+After running those files, you can see the converted json file in the folder that you set in the writeFileSynce function section.
+All done!
 
 
 
